@@ -1,54 +1,70 @@
-# Weather Now
+
+# 🌤️ Weather Now
+
+A simple and user-friendly weather application that allows users to check current weather conditions and tomorrow's forecast by entering a city name.
 
 ## Project Overview
 
-Weather Now is a simple web application that allows users to check the current weather by entering a city name.
+Weather Now is a web application developed using React and JavaScript. It retrieves weather information from the Open-Meteo API and displays the results in a clean and responsive interface.
 
-The application uses the Open-Meteo API to retrieve weather information and display it in a simple and user-friendly interface.
+## Live Demo
 
-## Project Goals
+https://weather-now-kappa-five.vercel.app
 
-- Allow users to search for a city.
-- Display the current temperature.
-- Show current weather conditions.
-- Provide a loading message while retrieving data.
-- Display a friendly error message if the weather data cannot be retrieved.
+## Features
 
-## Technologies
+- Search for weather by city name
+- Display current temperature in Fahrenheit
+- Show current weather conditions
+- Display feels-like temperature
+- Show humidity and wind speed
+- Provide tomorrow's weather forecast
+- Display a loading message while retrieving data
+- Show friendly error messages for invalid cities or failed requests
+
+## Technologies Used
 
 - React
 - JavaScript
 - HTML
 - CSS
 - Open-Meteo API
+- Vercel
 - GitHub
 
-## Main Features
+## System Architecture
 
-1. Search weather by city name.
-2. Display current temperature and weather conditions.
-3. Loading indicator while fetching data.
-4. Error handling when the API is unavailable.
-5. Optional weather forecast for tomorrow.
+1. User enters a city name.
+2. Geocoding API finds the city's coordinates.
+3. Open-Meteo Weather API retrieves weather information.
+4. React displays the weather results.
+5. Error handling manages unsuccessful requests.
 
-## API
+## Documentation
 
-This project uses the Open-Meteo API.
+Project documentation is available in the `docs` folder:
 
-Weather API: https://open-meteo.com/
+- [Quality Scenarios](docs/quality-scenarios.md)
+- [Architecture Decisions](docs/architecture-decisions.md)
+- [Testing Results](docs/testing-results.md)
 
-The API is free to use and does not require an API key for this project.
+## Testing
 
-## Architecture Focus
+The application has been tested with:
 
-The main architecture quality attribute is Availability.
+| Test Case | Result |
+|---|---|
+| Bangkok weather search | Passed |
+| Washington D.C. weather search | Passed |
+| Invalid city search | Passed |
 
-The application should handle API failures properly and provide clear feedback to users when weather information is unavailable.
+External API outage testing is documented as a remaining validation task.
 
-## Project Status
+## Availability
 
-Currently in the development and planning stage.
+The application uses error handling to manage invalid city names and unsuccessful API requests. Loading and error messages help users understand the application's current status.
 
 ## Author
 
-Weather Now – Final Project
+Akarawat Saengthong
+
