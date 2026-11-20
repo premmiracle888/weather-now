@@ -1,13 +1,15 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #163a70, #4b91c8);
+  background: linear-gradient(135deg, #102a43, #2563a6, #60a5fa);
   color: white;
+  min-height: 100vh;
 }
 
 .app {
@@ -16,32 +18,110 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 40px 20px;
   text-align: center;
 }
 
-h1 {
-  font-size: 42px;
+.app > h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.app > p {
+  color: #e0efff;
+  margin-bottom: 25px;
 }
 
 form {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 25px;
 }
 
 input {
-  padding: 14px;
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
+  outline: none;
 }
 
 button {
-  padding: 14px 22px;
+  padding: 15px 22px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #ffd166;
-  cursor: pointer;
+  color: #17324d;
   font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffbd36;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.weather-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.weather-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.weather-card h1 {
+  font-size: 65px;
+  margin-bottom: 10px;
+}
+
+.weather-card h3 {
+  margin: 15px 0;
+}
+
+.weather-card p {
+  margin: 10px 0;
+  color: #f0f7ff;
+}
+
+.weather-card hr {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin: 25px 0;
+}
+
+.error {
+  background: rgba(180, 30, 30, 0.35);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 450px;
+}
+
+@media (max-width: 480px) {
+  .app > h1 {
+    font-size: 36px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .weather-card {
+    padding: 22px;
+  }
 }
